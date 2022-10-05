@@ -44,7 +44,7 @@ function App() {
       <Navbar title="TextEdit" about="About" mode={Mode} toggleMode={toggleMode} />
       <div className="container" my-3  >
         <Alert alert={alert} />
-        <strong><TextForm showAlert={showAlert} heading="Enter your text" /></strong>
+        <strong><TextForm showAlert={showAlert} heading="Enter the text Now" /></strong>
       </div>
     </>
   );

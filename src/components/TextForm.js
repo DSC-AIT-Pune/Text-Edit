@@ -30,6 +30,13 @@ export default function TextForm(props) {
     props.showAlert(" Text has been Copied!", "success")
 
   }
+  const finder = ()=>{
+    let find = document.querySelector('.search').value
+    let replace = document.querySelector('.replace').value
+    let str = text.replace(find,replace)
+    setText(str)
+    props.showAlert(` ${find} replaced with ${replace}`,"success")
+    }
   const handleExtraSpaces = () =>{
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "))
@@ -48,6 +55,16 @@ export default function TextForm(props) {
         <button className="btn btn-primary mx-3" onClick={handleclearClick}>Clear text </button>
         <button className="btn btn-primary mx-3" onClick={handleCopy}>Copy-Text</button>
         <button className="btn btn-primary mx-3" onClick={handleExtraSpaces}>Remove extra spaces</button>
+
+        <div className="row mt-4 mb-4">
+        <div className="col">
+          <input type="text" className="form-control search" placeholder="Search"/>
+        </div>
+        <div className="col">
+          <input type="text" className="form-control replace" placeholder="Replace"/>
+        </div>
+        </div>
+        <button className="btn btn-primary mx-2 my-2" onClick={finder}>Search and Replace</button>
 
       </div>
       <div className="container my-2" style={{color: props.Mode==='dark'?'white':'black'}}>
