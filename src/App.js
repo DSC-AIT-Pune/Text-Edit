@@ -28,7 +28,7 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       document.getElementById('darkmode-id').style.color='white'
-      document.getElementById('darkmode-id').innerText = "Enable Lightmode"
+      document.getElementById('darkmode-id').innerText = "Enable LightMode"
       showAlert(" Dark mode has been enabled", "primary");
       document.title = 'TextEdit-Dark Mode';
 
@@ -38,7 +38,7 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       document.getElementById('darkmode-id').style.color='#042743'
-      document.getElementById('darkmode-id').innerText = "Enable Darkmode"
+      document.getElementById('darkmode-id').innerText = "Enable DarkMode"
       showAlert("Light mode has been enabled", "primary");
       document.title = 'TextEdit-Light Mode';
 
