@@ -10,7 +10,8 @@ import TextForm from './components/TextForm';
 
 
 function App() {
-  const [Mode, setMode] = useState('dark');// whether dark mode is enabled or not 
+  const [Mode, setMode] = useState('light');// whether dark mode is enabled or not
+  const [btntxt, setbtntxt] = useState('Enable Dark Mode');
   const [alert, setAlert] = useState(null)
   const showAlert = (message, type) => {
     setAlert({
@@ -19,33 +20,38 @@ function App() {
     })
     setTimeout(() => {
       setAlert(null);
-    }, 2000);
+    }, 1000);
   }
 
 
   const toggleMode = () => {
     if (Mode === 'light') {
       setMode('dark');
-      document.body.style.backgroundColor = '#042743';
-      showAlert(" Dark mode has been enabled", "primary");
+      setbtntxt('Enable Light Mode');
+      document.body.style.backgroundColor = '#000066'
+      document.body.style.color = 'white'
+      showAlert(" Dark mode has been enabled", "success");
       document.title = 'TextEdit-Dark Mode';
 
     }
     else {
       setMode('light');
-      document.body.style.backgroundColor = 'white';
+      setbtntxt('Enable Dark Mode');
+      document.body.style.backgroundColor = 'white'
+      document.body.style.color = 'black'
       showAlert(" Light mode has been enabled", "success");
       document.title = 'TextEdit-Light Mode';
+
 
     }
   }
   return (
     <>
-      <Navbar title="TextEdit" about="About" mode={Mode} toggleMode={toggleMode} />
-      <div className="container" my-3  >
+      <Navbar title="TextEdit" about="About" mode={Mode} toggleMode={toggleMode} btntxt={btntxt} />
+      
         <Alert alert={alert} />
         <strong><TextForm showAlert={showAlert} heading="Enter the text Now" /></strong>
-      </div>
+      
     </>
   );
 }
