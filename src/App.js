@@ -10,7 +10,7 @@ import TextForm from './components/TextForm';
 
 
 function App() {
-  const [Mode, setMode] = useState('dark');// whether dark mode is enabled or not 
+  const [Mode, setMode] = useState('light');// whether dark mode is enabled or not 
   const [alert, setAlert] = useState(null)
   const showAlert = (message, type) => {
     setAlert({
@@ -26,7 +26,7 @@ function App() {
   const toggleMode = () => {
     if (Mode === 'light') {
       setMode('dark');
-      document.body.style.backgroundColor = '#042743';
+      document.body.style.backgroundColor = '#181818';
       showAlert(" Dark mode has been enabled", "primary");
       document.title = 'TextEdit-Dark Mode';
 
@@ -44,7 +44,7 @@ function App() {
       <Navbar title="TextEdit" about="About" mode={Mode} toggleMode={toggleMode} />
       <div className="container" my-3  >
         <Alert alert={alert} />
-        <strong><TextForm showAlert={showAlert} heading="Enter the text Now" /></strong>
+        <TextForm showAlert={showAlert} mode={Mode} toggleMode={toggleMode}/>
       </div>
     </>
   );
