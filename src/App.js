@@ -27,19 +27,22 @@ function App() {
   const toggleMode = () => {
     if (Mode === 'light') {
       setMode('dark');
-      setbtntxt('Enable Light Mode');
-      document.body.style.backgroundColor = '#000066'
-      document.body.style.color = 'white'
-      showAlert(" Dark mode has been enabled", "success");
+      document.body.style.backgroundColor = '#042743';
+      document.getElementById('darkmode-id').style.color='white'
+      document.getElementById('darkmode-id').innerText = "Enable LightMode"
+      showAlert(" Dark mode has been enabled", "primary");
+
       document.title = 'TextEdit-Dark Mode';
 
     }
-    else {
+    else
+    {
       setMode('light');
-      setbtntxt('Enable Dark Mode');
-      document.body.style.backgroundColor = 'white'
-      document.body.style.color = 'black'
-      showAlert(" Light mode has been enabled", "success");
+      document.body.style.backgroundColor = 'white';
+      document.getElementById('darkmode-id').style.color='#042743'
+      document.getElementById('darkmode-id').innerText = "Enable DarkMode"
+      showAlert("Light mode has been enabled", "primary");
+
       document.title = 'TextEdit-Light Mode';
 
 
