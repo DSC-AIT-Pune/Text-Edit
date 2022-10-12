@@ -1,14 +1,14 @@
 import React from "react";
-import { Page, Text, Image, Document, StyleSheet } from "@react-pdf/renderer";
 import Appletouch from "./photos/apple-touch-icon.png";
+import { Page, Text, Image, Document, StyleSheet } from "@react-pdf/renderer";
 const styles = StyleSheet.create({
   body: {
-    paddingTop: 35,
-    paddingBottom: 65,
-    paddingHorizontal: 35,
+    paddingTop: 36,
+    paddingBottom: 66,
+    paddingHorizontal: 36,
   },
   title: {
-    fontSize: 25,
+    fontSize: 24,
     textAlign: "center",
   },
   text: {
