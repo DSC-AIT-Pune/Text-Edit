@@ -5,13 +5,13 @@ export default function About(props) {
         <div className="container py-5">
           <div className="row h-100 align-items-center py-5">
             <div className="col-lg-6">
-              <h1 className="display-4">Who we are?</h1>
+              <h1 className="display-4">Who are we?</h1>
               <p
                 className={`lead text-${
                   props.mode === "dark" ? "white" : "muted"
                 } mb-0`}
               >
-                We are group of people working on various features of
+                We are group of people working on the various features of
                 text-analyzer.
               </p>
               <p
@@ -59,8 +59,7 @@ export default function About(props) {
                   props.mode === "dark" ? "white" : "muted"
                 } mb-4`}
               >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Much appreciation to parth
               </p>
               <a
                 href="/"
@@ -133,7 +132,7 @@ export default function About(props) {
                   props.mode === "dark" ? "white" : "muted"
                 }`}
               >
-                Our Team is talented and can develop any type of webApp
+                Our Team is talented and can develop any type of webApp.
               </p>
             </div>
           </div>

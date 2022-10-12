@@ -69,7 +69,7 @@ function App() {
               <strong>
                 <TextForm
                   showAlert={showAlert}
-                  heading="Enter the text Below"
+                  heading="Now you can enter the text"
                 />
               </strong>
             }

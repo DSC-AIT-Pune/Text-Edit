@@ -1,7 +1,6 @@
 import React from "react";
 
 function Alert(props) {
-  // this complete capitalize fuction just to make first word capital , merely you can ignore this and focus on the main code
   const capitalalize = (word) => {
     const lower = word.toLowerCase();
     return lower.charAt(0).toUpperCase() + lower.slice(1);
