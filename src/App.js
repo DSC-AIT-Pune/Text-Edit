@@ -2,11 +2,9 @@
 import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
-// import React, { useState } from 'react';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -30,12 +28,10 @@ function App() {
   const toggleMode = () => {
     if (Mode === "light") {
       setMode("dark");
-
       setbtntxt("Enable Light Mode");
       document.body.style.backgroundColor = "#000066";
       document.body.style.color = "white";
-      showAlert(" Dark mode has been enabled", "success");
-
+      showAlert(" Dark mode enabled!", "success");
       document.title = "TextEdit-Dark Mode";
     } else {
       setMode("light");
@@ -43,9 +39,7 @@ function App() {
       setalertstate(true);
       document.body.style.backgroundColor = "white";
       document.body.style.color = "#042743";
-
-      showAlert("Light mode has been enabled", "success");
-
+      showAlert("Light mode enabled!", "success");
       document.title = "TextEdit-Light Mode";
     }
   };
