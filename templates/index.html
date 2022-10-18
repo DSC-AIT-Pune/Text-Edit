@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Kisan-Kart</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+    <!--jQuery library--> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--Latest compiled and minified JavaScript--> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='{{ url_for("static", filename="index.css") }}' rel="stylesheet" type="text/css"/>
+</head>
+<style>
+    
+    
+       
+    
+    
+</style>
+<div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="/">Kisan-Kart</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="/settings"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
+                    <li><a href="/productscopy"><span class="glyphicon glyphicon-log-in"></span> Products</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="lop" style="background: url_for("{{ url_for('static', filename='0c2721817c29d656af203e5c2e696555.jpg') }}") no-repeat ;"  >
+        
+        <div class="banner-image">
+            
+            <div class="container" id="comt">
+            <center>
+                <div class="banner_content">
+                    <h1>Rent-Heavy Machinery</h1>
+                    <p>Meet new heavy Machine holders</p> 
+                    <a href="/productscopy" class="btn btn-danger
+                    btn-lg active">Rent Now</a>  
+                </div>
+            </center>
+            </div>
+             
+        </div>
+        <div class="container">
+                
+    
+                    
+                
+        </div>
+        <footer>
+            <div class="container">
+                <center>
+                 <p>Copyright © Kisan-kart. All Rights
+                 Reserved | Contact Us: +91 8878758653”. </p>
+                </center>	
+            </div>    
+        </footer>
+    </div>
+    
+       
+      
+   
+    <script src='{{ url_for("static", filename="script.js") }}'></script>
+
+</body>
+</html>

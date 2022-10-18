@@ -1,0 +1,157 @@
+body{
+    width: 100%; 
+    height: 100%; 
+    margin: 0;
+    background-color:#6F1E51;
+    }
+a{
+    text-decoration: none; 
+    background-color: transparent; 
+    color:#ededed;
+ }
+ .content{
+    min-height: 600px;
+ }
+ .banner-image{
+   padding-top: 75px; 
+   padding-bottom: 50px;
+   margin-bottom: 20px;
+   text-align: center;
+   color: #f8f8f8;
+   background: url(img/intro-bg_1.jpg) no-repeat center; 
+   background-size: cover;
+ }
+.banner_content{
+   position: relative;
+   padding-top: 6%;
+   padding-bottom: 6%; 
+   overflow: hidden;
+   margin-top: 12%;
+   margin-bottom: 12%; 
+   background-color: 
+   rgba(0, 0, 0, 0.7); 
+   max-width: 660px;
+   font-family: roboto;
+}
+.caption{
+   color:#000; 
+   padding:0px 10px 10px; 
+   font-weight: bold; 
+   text-align: center;
+}
+
+.signup{
+   margin-top: 50px;
+   margin-bottom: 190px;
+}
+.settings{
+   margin-top: 70px;
+   margin-bottom: 345px;
+}
+
+#login-panel .panel-footer{
+   font-weight:normal;
+}
+
+#cameras:before, #watches:before, #shirts:before{
+   display: block; 
+   content: " "; 
+   margin-top: -85px; 
+   height: 85px; 
+   visibility: hidden;
+}
+
+footer{
+   padding: 10px 0;
+   background-color: #101010; 
+   columns: #9d9d9d;;
+   bottom: 0; 
+   font-size:14px;
+   width: 100%;
+}
+.content{
+   margin-top: 80px;
+}
+
+.password{
+   font-size: 25px;
+}
+center div{
+   border-radius: 30px;
+   opacity: 1;
+  
+}
+center div:hover{
+   box-shadow:5px 10px #888888;
+          
+}
+
+.lop{
+   background: url_for("static\0c2721817c29d656af203e5c2e696555.jpg") no-repeat ;
+   background-size: 100%;
+   background-position-x: center;
+   background-position-y: center;
+   
+}
+#kopp{
+   margin-top: auto;
+   
+}
+
+#cameras{
+   display: flex;
+}
+.opty{
+   display: grid;
+   width: 100%;
+   height: 75%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows:1fr 1fr 1fr;
+   padding: 20px;
+   margin: auto;
+}
+#iop{
+   border: solid;
+   border-radius: 20px;
+   margin: 20px;
+   padding: 20px;
+   background-color:#A3CB38 ;
+}
+.card-title{
+   font-weight: 700;
+}
+.card-text{
+   font-weight: 700;
+}
+#uiop{
+   margin: auto;
+   background-color: #888888;
+
+}
+#uiopy{
+   
+   margin: auto;
+   text-align: center;
+   
+}
+#h{
+   font-weight: 700;
+   font-size: larger;
+
+}
+#iop img{
+     margin-left: 50px;
+}
+#pyui{
+   background-color: #9980FA;
+   padding: 30px;
+   margin: 40px;
+   border: 2px solid;
+   border-radius: 20px;
+}
+#comt center div{
+
+   background-color:#006266 ;
+   
+}

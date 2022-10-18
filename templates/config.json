@@ -1,0 +1,17 @@
+{
+    "params":
+    {
+      "local_server":"True",
+      "local_uri": "mysql://root:@localhost/kisan_kart",
+      "prod_uri":"mysql://root:@localhost/kisan_kart",
+      
+      "blog_name": "Coding Thunder",
+      "tag_line": "Heaven for programmers",
+      "gmail-user":"your-email@gmail.com",
+      "gmail-password":"gmailpassword",
+      "about_text": "Hi my name is harry and I create programming tutorials and I am a good boy",
+      "admin_user": "Aditya@123",
+      "admin_password" : "password"
+    }
+  }
+  

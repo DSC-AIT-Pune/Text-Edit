@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Products | KisanKart</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        <!--jQuery library--> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript--> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='{{ url_for("static", filename="index.css") }}' rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="/">kisan kart</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span> KisanKart </a></li>
+                        <li><a href="/settings"><span class="glyphicon glyphicon-user"></span> Settings </a></li>
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>    
+        <div class="container content">
+            <!-- Jumbotron Header -->
+            <div class="jumbotron home-spacer" id="products-jumbotron">
+                <h1>Welcome to our  Kisan kart!</h1>
+                <p>We have the best Machinery, Tractors and Harvestor for you. No need to hunt around, we have all in one place.</p>
+
+            </div>
+                
+                <div class="opty">
+                    {% for post in posts %}
+                    <div class="card " style="" id="iop">
+                        <img class="card-img-top" src='{{ url_for("static", filename="f6901e881b77e8134a17d226b2b5dee9.jpg") }}' alt="Card image cap">
+                        <div class="card-body" id="uiopy">
+                          <h5 id="h"class="card-title">{{post.type}}</h5>
+                          <p class="card-text">{{post.contact}}</p>
+                          <p class="card-text">{{post.adress}}</p>
+                          <a href="" class="btn btn-primary">View-profile</a>
+                        </div>
+                    </div>
+    
+                    {% endfor %}
+                </div>
+
+                
+            </div>
+        <footer>
+                <div class="container">
+                    <center>
+                     <p>Copyright © Kisankart. All Rights
+                    Reserved | Contact Us: +91 90000 00000”. </p>
+                    </center>	
+                </div>    
+        </footer>
+        <script src='{{ url_for("static", filename="script.js") }}'>
+
+           
+            
+        </script>
+    </body>
+
+</html>
