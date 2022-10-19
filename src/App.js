@@ -2,12 +2,14 @@
 import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
+import Contact from "./components/Contact";
 // import React, { useState } from 'react';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { isButtonElement } from "react-router-dom/dist/dom";
 
 function App() {
   const [mode, setMode] = useState("light"); // whether dark mode is enabled or not
@@ -52,12 +54,16 @@ function App() {
         <Navbar
           title="TextEdit"
           about="About"
-          mode={mode}
+
+          Contact="Contact"
+          mode={Mode}
+
           toggleMode={toggleMode}
           btntxt={btntxt}
         />
 
         <Alert alert={alert} alertstate={alertstate} />
+
         <Routes>
           <Route
             exact
@@ -73,7 +79,9 @@ function App() {
             }
           />
 
-          <Route exact path="/about" element={<About mode={mode} />} />
+          <Route exact path="/about" element={<About mode={Mode} />} />
+          <Route exact path="/Contact" element={<Contact mode={Mode} />} />
+
         </Routes>
       </Router>
     </>
