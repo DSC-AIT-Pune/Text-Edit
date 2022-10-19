@@ -52,21 +52,53 @@ export default function TextForm(props) {
             value={text}
             id="myBox"
             rows="8"
+            style={
+              props.mode === "dark"
+                ? {
+                    backgroundColor: "gray",
+                    color: "white",
+                    border: "2px solid white",
+                  }
+                : { backgroundColor: "white", color: "black" }
+            }
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-3" onClick={handleUpClick}>
+        <button
+          className={`btn btn-${
+            props.mode === "dark" ? "dark" : "primary"
+          } m-2`}
+          onClick={handleUpClick}
+        >
           convert to uppercase
         </button>
-        <button className="btn btn-warning mx-3" onClick={handleLoClick}>
+        <button
+          className={`btn btn-${
+            props.mode === "dark" ? "dark" : "warning"
+          } m-2`}
+          onClick={handleLoClick}
+        >
           convert to lowercase
         </button>
-        <button className="btn btn-danger mx-3" onClick={handleclearClick}>
+        <button
+          className={`btn btn-${props.mode === "dark" ? "dark" : "danger"} m-2`}
+          onClick={handleclearClick}
+        >
           Clear text{" "}
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleCopy}>
+        <button
+          className={`btn btn-${
+            props.mode === "dark" ? "dark" : "primary"
+          } m-2`}
+          onClick={handleCopy}
+        >
           Copy-Text
         </button>
-        <button className="btn btn-warning mx-3" onClick={handleExtraSpaces}>
+        <button
+          className={`btn btn-${
+            props.mode === "dark" ? "dark" : "warning"
+          } m-2`}
+          onClick={handleExtraSpaces}
+        >
           Remove extra spaces
         </button>
 
@@ -76,11 +108,21 @@ export default function TextForm(props) {
         >
           {({ loading }) =>
             loading ? (
-              <button className="btn btn-danger mx-3">
+              <button
+                className={`btn btn-${
+                  props.mode === "dark" ? "dark" : "danger"
+                } m-2`}
+              >
                 'Loading document...'
               </button>
             ) : (
-              <button className="btn btn-danger mx-3">Download PDF</button>
+              <button
+                className={`btn btn-${
+                  props.mode === "dark" ? "dark" : "danger"
+                } m-2`}
+              >
+                Download PDF
+              </button>
             )
           }
         </PDFDownloadLink>
@@ -105,7 +147,7 @@ export default function TextForm(props) {
           Search and Replace
         </button>
       </div>
-      <div className="container my-2">
+      <div className="container">
         <h2>
           {" "}
           <span className="badge bg-secondary">Your Text Summary</span>

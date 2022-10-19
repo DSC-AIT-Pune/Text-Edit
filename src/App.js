@@ -10,10 +10,11 @@ import Alert from "./components/Alert";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [Mode, setMode] = useState("light"); // whether dark mode is enabled or not
+  const [mode, setMode] = useState("light"); // whether dark mode is enabled or not
   const [btntxt, setbtntxt] = useState("Enable Dark Mode");
   const [alert, setAlert] = useState(null);
   const [alertstate, setalertstate] = useState(false);
+
   const showAlert = (message, type) => {
     setalertstate(true);
     setAlert({
@@ -28,25 +29,21 @@ function App() {
   };
 
   const toggleMode = () => {
-    if (Mode === "light") {
+    if (mode === "light") {
       setMode("dark");
-
       setbtntxt("Enable Light Mode");
-      document.body.style.backgroundColor = "#000066";
-      document.body.style.color = "white";
+      document.body.style.backgroundColor = "rgb(56, 56, 56)";
+      document.body.style.color = "azure";
       showAlert(" Dark mode has been enabled", "success");
-
-      document.title = "TextEdit-Dark Mode";
+      document.title = `TextEdit - Dark Mode`;
     } else {
       setMode("light");
       setbtntxt("Enable Dark Mode");
       setalertstate(true);
-      document.body.style.backgroundColor = "white";
-      document.body.style.color = "#042743";
-
+      document.body.style.backgroundColor = "azure";
+      document.body.style.color = "black";
       showAlert("Light mode has been enabled", "success");
-
-      document.title = "TextEdit-Light Mode";
+      document.title = `TextEdit - Light Mode`;
     }
   };
   return (
@@ -55,7 +52,7 @@ function App() {
         <Navbar
           title="TextEdit"
           about="About"
-          mode={Mode}
+          mode={mode}
           toggleMode={toggleMode}
           btntxt={btntxt}
         />
@@ -68,6 +65,7 @@ function App() {
             element={
               <strong>
                 <TextForm
+                  mode={mode}
                   showAlert={showAlert}
                   heading="Now you can enter the text"
                 />
@@ -75,7 +73,7 @@ function App() {
             }
           />
 
-          <Route exact path="/about" element={<About mode={Mode} />} />
+          <Route exact path="/about" element={<About mode={mode} />} />
         </Routes>
       </Router>
     </>
