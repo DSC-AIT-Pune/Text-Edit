@@ -18,6 +18,8 @@ function Alert(props) {
           </div>
         </div>
       )}
+      
+      
     </div>
   );
 }
