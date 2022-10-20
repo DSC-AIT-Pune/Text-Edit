@@ -3,10 +3,13 @@ import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Socialhandles from "./components/Socialhandles.js"
 // import React, { useState } from 'react';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
+
 import Alert from "./components/Alert";
+
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import { isButtonElement } from "react-router-dom/dist/dom";
@@ -54,9 +57,10 @@ function App() {
         <Navbar
           title="TextEdit"
           about="About"
+          Socialhandles = "Socialhandles"
 
           Contact="Contact"
-          mode={Mode}
+          mode={mode}
 
           toggleMode={toggleMode}
           btntxt={btntxt}
@@ -79,8 +83,9 @@ function App() {
             }
           />
 
-          <Route exact path="/about" element={<About mode={Mode} />} />
-          <Route exact path="/Contact" element={<Contact mode={Mode} />} />
+          <Route exact path="/about" element={<About mode={mode} />} />
+          <Route exact path="/Contact" element={<Contact mode={mode} />} />
+          <Route exact path="/Socialhandles" element={<Socialhandles mode={mode} />} />
 
         </Routes>
       </Router>

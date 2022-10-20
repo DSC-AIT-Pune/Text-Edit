@@ -65,6 +65,16 @@ export default function Navbar(props) {
                 {props.Contact}
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/Socialhandles" ? "active" : ""
+                }`}
+                to="/Socialhandles"
+              >
+                {props.Socialhandles}
+              </Link>
+            </li>
           </ul>
           <div
             className={`form-check form-switch text-${
