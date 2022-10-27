@@ -1,15 +1,12 @@
-// import logo from './logo.svg';
-import { useState } from "react";
 import "./App.css";
+import { React, useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Socialhandles from "./components/Socialhandles.js"
-// import React, { useState } from 'react';
+import Socialhandles from "./components/Socialhandles.js";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-
+import Ask from "./components/Ask";
 import Alert from "./components/Alert";
-
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import { isButtonElement } from "react-router-dom/dist/dom";
@@ -57,11 +54,9 @@ function App() {
         <Navbar
           title="TextEdit"
           about="About"
-          Socialhandles = "Socialhandles"
-
+          Socialhandles="Socialhandles"
           Contact="Contact"
           mode={mode}
-
           toggleMode={toggleMode}
           btntxt={btntxt}
         />
@@ -83,10 +78,14 @@ function App() {
             }
           />
 
-          <Route exact path="/about" element={<About mode={mode} />} />
+          <Route exact path="/About" element={<About mode={mode} />} />
           <Route exact path="/Contact" element={<Contact mode={mode} />} />
-          <Route exact path="/Socialhandles" element={<Socialhandles mode={mode} />} />
-
+          <Route exact path="/Ask" element={<Ask />} />
+          <Route
+            exact
+            path="/Socialhandles"
+            element={<Socialhandles mode={mode} />}
+          />
         </Routes>
       </Router>
     </>
