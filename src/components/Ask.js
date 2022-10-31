@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import AskContext from "../context/AskContext";
 
-function Ask(props) {
+function Ask() {
+  const context = useContext(AskContext);
+  const { addQuery } = context;
+
+  const [ask, setAsk] = useState({
+    email: "",
+    name: "",
+    phone: "",
+    query: "",
+  });
+
+  const btnSubmit = (e) => {
+    e.preventDefault();
+    addQuery(ask.email, ask.name, ask.phone, ask.query);
+    setAsk({ email: "", name: "", phone: "", query: "" });
+  };
+
+  const inputEvent = (e) => {
+    console.log({ [e.target.name]: e.target.value });
+    setAsk({ ...ask, [e.target.name]: e.target.value });
+  };
+
   return (
     <div>
-      <h2 className="text-center" style={{ fontFamily: "cursive" }}>
+      <h2 className="text-center p-2" style={{ fontFamily: "cursive" }}>
         Ask It Down👇
       </h2>
       <div
@@ -17,8 +39,10 @@ function Ask(props) {
               type="email"
               className="form-control"
               id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              name="email"
               placeholder="Enter email"
+              onChange={inputEvent}
+              value={ask.email}
             />
             <small id="emailHelp" className="form-text text-muted">
               We'll never share your email with anyone else.
@@ -30,8 +54,22 @@ function Ask(props) {
               type="name"
               className="form-control"
               id="name"
-              aria-describedby="emailHelp"
+              name="name"
               placeholder="Enter your name"
+              onChange={inputEvent}
+              value={ask.name}
+            />
+          </div>
+          <div className="form-group m-3">
+            <label for="phone">Phone no. ☎️</label>
+            <input
+              type="number"
+              className="form-control"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone no."
+              onChange={inputEvent}
+              value={ask.phone}
             />
           </div>
           <div className="form-group m-3">
@@ -40,13 +78,19 @@ function Ask(props) {
               type="query"
               className="form-control"
               id="query"
-              aria-describedby="emailHelp"
+              name="query"
               placeholder="Enter your query"
               rows="4"
+              onChange={inputEvent}
+              value={ask.query}
             ></textarea>
           </div>
           <div className="d-flex justify-content-between">
-            <button type="submit" className="btn btn-primary my-2 mx-3">
+            <button
+              type="submit"
+              className="btn btn-primary my-2 mx-3"
+              onClick={btnSubmit}
+            >
               Submit
             </button>
             <button type="reset" className="btn btn-danger my-2 mx-3">
