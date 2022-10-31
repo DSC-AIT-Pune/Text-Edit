@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const MongoURI = `mongodb://localhost:27017`;
+require("dotenv").config();
 
 const connectDB = () => {
-  mongoose.connect(MongoURI, (err) => {
+  mongoose.connect(process.env.MongoURI, (err) => {
     if (err) throw err;
     console.log(">Connected...");
   });
