@@ -1,7 +1,7 @@
 export default function About(props) {
   return (
     <>
-      <div className={`bg-${props.mode === "dark" ? "dark" : "light"}`}>
+      <div className={`bg-${props.mode === "dark" ? "dark" : "white"}`}>
         <div className="container py-5">
           <div className="row h-100 align-items-center py-5">
             <div className="col-lg-6">

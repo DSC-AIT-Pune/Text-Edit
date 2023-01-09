@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PDFfile from "./PDFfile";
 import { PDFDownloadLink } from "@react-pdf/renderer";
+
 export default function TextForm(props) {
   const [text, setText] = useState("");
   const handleUpClick = () => {
@@ -55,7 +56,7 @@ export default function TextForm(props) {
             style={
               props.mode === "dark"
                 ? {
-                    backgroundColor: "gray",
+                    backgroundColor: "#6c757d",
                     color: "white",
                     border: "2px solid white",
                   }
@@ -65,7 +66,7 @@ export default function TextForm(props) {
         </div>
         <button
           className={`btn btn-${
-            props.mode === "dark" ? "dark" : "primary"
+            props.mode === "dark" ? "secondary" : "primary"
           } m-2`}
           onClick={handleUpClick}
         >
@@ -73,21 +74,23 @@ export default function TextForm(props) {
         </button>
         <button
           className={`btn btn-${
-            props.mode === "dark" ? "dark" : "warning"
+            props.mode === "dark" ? "secondary" : "warning"
           } m-2`}
           onClick={handleLoClick}
         >
           convert to lowercase
         </button>
         <button
-          className={`btn btn-${props.mode === "dark" ? "dark" : "danger"} m-2`}
+          className={`btn btn-${
+            props.mode === "dark" ? "secondary" : "danger"
+          } m-2`}
           onClick={handleclearClick}
         >
           Clear text{" "}
         </button>
         <button
           className={`btn btn-${
-            props.mode === "dark" ? "dark" : "primary"
+            props.mode === "dark" ? "secondary" : "primary"
           } m-2`}
           onClick={handleCopy}
         >
@@ -95,7 +98,7 @@ export default function TextForm(props) {
         </button>
         <button
           className={`btn btn-${
-            props.mode === "dark" ? "dark" : "warning"
+            props.mode === "dark" ? "secondary" : "warning"
           } m-2`}
           onClick={handleExtraSpaces}
         >
@@ -110,7 +113,7 @@ export default function TextForm(props) {
             loading ? (
               <button
                 className={`btn btn-${
-                  props.mode === "dark" ? "dark" : "danger"
+                  props.mode === "dark" ? "secondary" : "danger"
                 } m-2`}
               >
                 'Loading document...'
@@ -118,7 +121,7 @@ export default function TextForm(props) {
             ) : (
               <button
                 className={`btn btn-${
-                  props.mode === "dark" ? "dark" : "danger"
+                  props.mode === "dark" ? "secondary" : "danger"
                 } m-2`}
               >
                 Download PDF

@@ -38,9 +38,9 @@ export default function Navbar(props) {
             <li className="nav-item">
               <Link
                 className={`nav-link ${
-                  location.pathname === "/about" ? "active" : ""
+                  location.pathname === "/About" ? "active" : ""
                 }`}
-                to="/about"
+                to="/About"
               >
                 {props.about}
               </Link>
@@ -55,7 +55,7 @@ export default function Navbar(props) {
                 Ask
               </Link>
             </li>
-             <li className="nav-item">
+            <li className="nav-item">
               <Link
                 className={`nav-link ${
                   location.pathname === "/contact" ? "active" : ""

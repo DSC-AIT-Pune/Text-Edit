@@ -6,19 +6,20 @@ function Alert(props) {
     return lower.charAt(0).toUpperCase() + lower.slice(1);
   };
   return (
-    <div style={{ height: "25px" }}>
+    <div
+      style={{ height: "35px" }}
+      className={`bg-${props.mode === "dark" ? "dark" : "white"}`}
+    >
       {props.alert && (
-        <div style={{ height: "25px" }}>
-          <div
-            className={`alert alert-${props.alert.type} alert-dismissible fade show`}
-            role="alert"
-          >
-            <strong>{capitalalize(props.alert.type)}</strong>: {props.alert.msg}
-          </div>
+        <div
+          className={`alert alert-${props.alert.type} alert-dismissible fade show`}
+          role="alert"
+          id="display"
+        >
+          <strong>{capitalalize(props.alert.type)} : </strong>
+          {props.alert.msg}
         </div>
       )}
-      
-      
     </div>
   );
 }
